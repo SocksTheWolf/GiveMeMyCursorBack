@@ -391,3 +391,4 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+GiveMeMyCursorBack/Build/Build.targets
