@@ -3,7 +3,6 @@ using GenericModConfigMenu;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
-using StardewValley.Minigames;
 
 namespace GiveMeMyCursorBack
 {
