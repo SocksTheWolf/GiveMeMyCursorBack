@@ -40,6 +40,14 @@ namespace GiveMeMyCursorBack
                     mod: ModManifest,
                     text: () => "Get your cursor back!");
 
+                gmcm.AddBoolOption(
+                    mod: ModManifest,
+                    name: () => "Enable?",
+                    tooltip: () => "Allows you to toggle on and off the mod's cursor abilities",
+                    getValue: () => _config.Enabled,
+                    setValue: value => _config.Enabled = value
+                );
+
                 gmcm.AddParagraph(
                     mod: ModManifest,
                     text: () =>
@@ -64,6 +72,9 @@ namespace GiveMeMyCursorBack
 
         private void OnUpdateTicked(object sender, UpdateTickedEventArgs e)
         {
+            if (!_config.Enabled)
+                return;
+
             _tickCounter++;
 
             if (_tickCounter < _config.TickThreshold)
